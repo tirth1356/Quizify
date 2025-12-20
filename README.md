@@ -8,7 +8,8 @@ Quizify is a smart web app that converts your educational text into organized co
 🎥 Tutorial video: [*Ready to watch!* ](https://youtu.be/fihg7uMRoX8) 
 ---
 ## FLOWCHART
-<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/6a763473-31d2-42de-bba3-dc857d3122ae" />
+<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/40474af5-2acb-4cbe-afd6-39e929ddade1" /> 
+
 
 
 ---
