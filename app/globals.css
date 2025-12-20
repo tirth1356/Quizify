@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
-/* ============================= */
-/* 🌑 ROOT THEME */
-/* ============================= */
-
+/* 🌑 ROOT THEME COLORS */
 :root {
   --bg-dark: #020617;
   --bg-deep: #01030f;
@@ -13,10 +10,7 @@
   --accent-purple: 168, 85, 247;
 }
 
-/* ============================= */
 /* 🧠 GLOBAL RESET */
-/* ============================= */
-
 *,
 *::before,
 *::after {
@@ -38,10 +32,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* ============================= */
-/* 🌌 PREMIUM ANIMATED BACKGROUND WITH FLOATING LIGHT BLOBS */
-/* ============================= */
-
+/* 🌌 PREMIUM ANIMATED BACKGROUND */
 .glass-bg {
   min-height: 100dvh;
   width: 100%;
@@ -49,40 +40,15 @@ body {
   overflow: hidden;
 
   background:
-    /* blue glow cloud */
-    radial-gradient(
-      700px circle at 45% -12%,
-      rgba(var(--accent-blue), 0.18),
-      transparent 60%
-    ),
-
-    /* purple depth cloud */
-    radial-gradient(
-      900px circle at 55% 45%,
-      rgba(var(--accent-purple), 0.15),
-      transparent 70%
-    ),
-
-    /* vertical atmosphere */
-    linear-gradient(
-      to bottom,
-      #040b1f 0%,
-      #06152d 22%,
-      #0a1033 45%,
-      #07071c 72%,
-      #020617 100%
-    );
+    radial-gradient(700px circle at 45% -12%, rgba(var(--accent-blue), 0.18), transparent 60%),
+    radial-gradient(900px circle at 55% 45%, rgba(var(--accent-purple), 0.15), transparent 70%),
+    linear-gradient(to bottom, #040b1f 0%, #06152d 22%, #0a1033 45%, #07071c 72%, #020617 100%);
 
   background-size: 200% 200%;
-  animation:
-    bg-drift-main 32s ease-in-out infinite,
-    bg-drift-subtle 18s ease-in-out infinite alternate;
+  animation: bg-drift-main 32s ease-in-out infinite, bg-drift-subtle 18s ease-in-out infinite alternate;
 }
 
-/* ============================= */
-/* FLOATING LIGHT BLOBS LAYERS */
-/* ============================= */
-
+/* ✨ FLOATING LIGHT BLOBS */
 .glass-bg::before,
 .glass-bg::after {
   content: "";
@@ -96,7 +62,6 @@ body {
   opacity: 0.12;
 }
 
-/* main drifting lights */
 .glass-bg::before {
   background-image:
     radial-gradient(circle, rgba(var(--accent-blue), 0.18) 0%, transparent 50%),
@@ -105,7 +70,6 @@ body {
   animation: float-lights 26s linear infinite;
 }
 
-/* subtle secondary drifting lights for depth */
 .glass-bg::after {
   background-image:
     radial-gradient(circle, rgba(var(--accent-purple), 0.15) 0%, transparent 50%),
@@ -113,42 +77,26 @@ body {
   animation: float-lights 38s linear infinite alternate-reverse;
 }
 
-/* keyframes for gentle floating motion */
 @keyframes float-lights {
-  0% {
-    background-position: 0% 0%, 50% 20%, 80% 10%;
-  }
-  25% {
-    background-position: 10% 5%, 55% 25%, 75% 15%;
-  }
-  50% {
-    background-position: 20% 10%, 30% 30%, 70% 50%;
-  }
-  75% {
-    background-position: 15% 15%, 45% 40%, 65% 30%;
-  }
-  100% {
-    background-position: 0% 0%, 50% 20%, 80% 10%;
-  }
+  0% { background-position: 0% 0%, 50% 20%, 80% 10%; }
+  25% { background-position: 10% 5%, 55% 25%, 75% 15%; }
+  50% { background-position: 20% 10%, 30% 30%, 70% 50%; }
+  75% { background-position: 15% 15%, 45% 40%, 65% 30%; }
+  100% { background-position: 0% 0%, 50% 20%, 80% 10%; }
 }
 
-/* main slow movement of background gradient */
 @keyframes bg-drift-main {
   0% { background-position: 50% 0%; }
   50% { background-position: 54% 20%; }
   100% { background-position: 50% 0%; }
 }
 
-/* subtle secondary hue shift (adds life) */
 @keyframes bg-drift-subtle {
   from { filter: hue-rotate(0deg); }
   to { filter: hue-rotate(-6deg); }
 }
 
-/* ============================= */
-/* 🧊 GLASS CARD */
-/* ============================= */
-
+/* 🧊 GLASS CARD STYLING */
 .glass-card {
   position: relative;
   background: rgba(255, 255, 255, 0.055);
@@ -159,18 +107,12 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* lift + glow */
 .glass-card:hover {
   transform: translateY(-4px);
-  box-shadow:
-    0 14px 34px rgba(0, 0, 0, 0.55),
-    0 0 28px rgba(var(--accent-blue), 0.18);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55), 0 0 28px rgba(var(--accent-blue), 0.18);
 }
 
-/* ============================= */
-/* 🎯 INPUTS – CLICK SAFE */
-/* ============================= */
-
+/* 🎯 INPUTS SAFE TO CLICK */
 input,
 textarea,
 button,
@@ -180,7 +122,6 @@ select {
   pointer-events: auto;
 }
 
-/* ============================= */
 /* ✨ ENTRY ANIMATION */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(10px); }
