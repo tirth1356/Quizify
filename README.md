@@ -51,14 +51,6 @@ Quizify/ <br>
 
 ---
 
-## ❤️ Team
-
-Made with ❤️ by **Tirth Patel & Divy Mevada**  
-
-Check out the source on GitHub: [View on GitHub](https://github.com/tirth1356/Quizify)  
-
----
-
 ## 🚀 Tech Stack
 
 - **Frontend:** Next.js (App Router) + Tailwind CSS  
@@ -77,5 +69,9 @@ Check out the source on GitHub: [View on GitHub](https://github.com/tirth1356/Qu
 - Great for self-study or classroom use!  
 
 ---
+---
 
+## ❤️ Team
+
+Made with ❤️ by **Tirth Patel & Divy Mevada**  
 Enjoy learning smarter with Quizify! 🎉
