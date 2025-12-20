@@ -5,9 +5,7 @@ import DifficultySelector from './components/DifficultySelector';
 import ConceptHeatmap, { ConceptChip } from './components/ConceptHeatmap';
 import HierarchyTree from './components/HierarchyTree';
 
-/**
- * Types matching Groq API JSON response
- */
+
 interface Concept {
   name: string;
   definition: string;
