@@ -14,7 +14,7 @@ Quizify is a smart web app that converts your educational text into organized co
 - 🧠 **Concept Extraction** – Breaks down large educational content into structured concepts.  
 - ❓ **Quiz Generation** – Generates multiple-choice and practice questions from your content.  
 - ⚡ **AI Powered** – Uses the Groq API (powered by LLaMA 3.1) for understanding and processing text.  
-- 🌙 **Dark/Light Mode** – Smooth theme switching for comfortable reading.  
+- 🎨 **Human-Friendly UI** – Clean, intuitive, and visually attractive interface for easy interaction.  
 - 💻 **Responsive Design** – Works beautifully on mobile, tablet, and desktop.  
 
 ---
