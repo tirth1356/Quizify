@@ -1,130 +1,100 @@
-# Autonomous Knowledge Extractor + Quiz Builder
+# Read2Quiz
 
-A fully serverless AI web application that extracts key concepts from educational text and generates difficulty-calibrated quiz questions using Google Gemini 2.5 Flash.
+Read2Quiz is a serverless AI-powered web application that converts long educational text into structured knowledge and quiz questions automatically.
 
-## 🚀 Features
+The entire application runs as a single frontend deployment using serverless functions. No separate backend server or database is required.
 
-- **AI-Powered Knowledge Extraction**: Automatically identifies and organizes key concepts from educational text
-- **Adaptive Quiz Generation**: Creates exactly 10 quiz questions tailored to your difficulty preference
-- **Intelligent Difficulty Matching**: Questions are carefully calibrated to match your selected difficulty level
-- **Self-Validation**: AI performs a built-in quality check to ensure difficulty alignment
-- **Dark/Light Mode**: Beautiful UI with automatic dark mode on first visit
-- **Responsive Design**: Works seamlessly on mobile, tablet, and desktop
-- **Fully Serverless**: No backend server needed—runs entirely on Vercel
+---
 
-## 💡 How It Works
+## What This App Does
 
-### Architecture
+- Takes a long educational text as input (chapter, notes, article)
+- Extracts key concepts and definitions
+- Organizes concepts into topics and subtopics
+- Generates quiz questions based on the content
+- Assigns difficulty levels (easy, medium, hard)
+- Allows the user to choose the type of questions:
+  - Easy only
+  - Medium only
+  - Hard only
+  - Mixed
+- Displays results with difficulty-based color hover effects
+- Supports dark and light mode (dark mode by default)
 
-Browser (React UI) → Vercel Serverless Function → Google Gemini API → JSON Response
+---
 
-**Key Point**: The API key is stored securely on the server—never sent to the browser.
+## How It Works (High Level)
 
-## 🛠 Quick Start
+1. The user pastes educational text into the web app
+2. The user selects the desired question difficulty
+3. The frontend sends the request to a serverless API route
+4. The serverless function calls the LLaMA API
+5. The AI processes the text using an internal multi-step reasoning pipeline
+6. A structured JSON response is generated
+7. The frontend renders concepts, hierarchy, and quiz questions
 
-### 1. Get Your Gemini API Key
+---
 
-1. Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
-2. Click "Create API Key" (free tier available)
-3. Copy the generated key
+## AI Model Used
 
-### 2. Local Development
+- **LLaMA API**
+- The AI is responsible for:
+  - Text segmentation
+  - Concept extraction
+  - Hierarchy generation
+  - Quiz creation
+  - Difficulty classification
+  - Internal consistency validation
 
-```bash
-cd knowledge-extractor
-echo 'GEMINI_API_KEY=<your-key-here>' > .env.local
-npm install
-npm run dev
-```
+All AI calls are executed on the server side using serverless API routes.
 
-Visit http://localhost:3000
+---
 
-### 3. Deploy to Vercel
+## Serverless Architecture
 
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-# Then: import repo in Vercel dashboard and set GEMINI_API_KEY env var
-```
+- Built using **Next.js (App Router)**
+- Backend logic runs as **serverless API routes**
+- Frontend and backend exist in the same project
+- No database or persistent storage
+- API keys are stored securely using environment variables
+- Deployed as a single application on Vercel
 
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
+---
 
-## 📁 Project Structure
+## How the API Response Is Generated
 
-```
-app/api/process-text/route.ts    # Serverless endpoint (AI processing)
-app/components/                  # React components (UI)
-app/page.tsx                     # Main page
-.env.local                       # Dev environment variables
-DEPLOYMENT.md                    # Detailed deployment guide
-```
+- The serverless API route sends a structured prompt to the LLaMA API
+- The AI performs all reasoning steps in one request
+- The response is returned as strict JSON
+- The frontend parses the JSON and displays the output visually
 
-## 🎨 UI Features
+---
 
-- **Color-Coded Difficulty Cards**: Green (easy), Amber (medium), Red (hard)
-- **Dark Mode Default**: Automatic dark mode on first visit
-- **Responsive Design**: Mobile-first Tailwind CSS
-- **Smooth Animations**: Fade-in effects for results
+## Deployment Steps (Vercel)
 
-## 🔐 Security
+1. Clone the repository
+2. Install dependencies  
+   npm install
+3. Create a `.env.local` file and add:
+   LLM_API_KEY=your_api_key_here
+4. Push the project to GitHub
+5. Import the repository into Vercel
+6. Add the same environment variable in the Vercel dashboard
+7. Deploy the project
 
-✅ API key never exposed to browser
-✅ Serverless functions isolated
-✅ Environment variables encrypted by Vercel
-✅ HTTPS enforced
-✅ No database or user tracking
+Once deployed, both frontend and backend logic run automatically.
 
-## 📊 Gemini Single-Prompt Processing
+---
 
-One comprehensive prompt instructs the AI to:
-1. Parse text into logical sections
-2. Extract key concepts
-3. Create topic/subtopic hierarchy
-4. Generate 10 difficulty-appropriate questions
-5. Self-validate quality and alignment
-6. Return strict JSON (no markdown)
+## Live Demo
 
-## 💰 Cost
+Vercel Deployment Link:  
+https://your-vercel-project-link.vercel.app
 
-- **Gemini API**: Free tier (~1M tokens/month)
-- **Vercel**: Free tier (100GB bandwidth)
-- **Total**: $0/month
+---
 
-## 🚀 Performance
+## Notes
 
-- First request: ~3-5 seconds (AI processing)
-- Subsequent: Same (~3-5 seconds)
-- Cold starts: <200ms (Vercel)
-- Auto-scaling: Yes
-
-## 📚 Tech Stack
-
-- Frontend: React 19 + TypeScript
-- Backend: Next.js 16 serverless
-- AI: Google Gemini 2.5 Flash
-- Hosting: Vercel
-- Styling: Tailwind CSS
-
-## 🔧 Troubleshooting
-
-**"GEMINI_API_KEY is not set"**
-- Local: Add key to `.env.local` and restart dev server
-- Vercel: Set in Project Settings → Environment Variables
-
-**Quiz generation fails**
-- Check API key validity
-- Ensure 100+ words of input text
-- Check browser Network tab for responses
-
-**Dark mode not working**
-- Clear localStorage: `localStorage.clear()`
-- Enable JavaScript
-- Check browser console (F12)
-
-## 📖 Learn More
-
-- [Google AI Studio](https://aistudio.google.com)
-- [Next.js Docs](https://nextjs.org/docs)
-- [Vercel Docs](https://vercel.com/docs)
-- [Tailwind CSS](https://tailwindcss.com)
+- This project is intentionally stateless
+- Focus is on AI reasoning and content generation
+- Designed for fast, reliable demos and hackathon use
