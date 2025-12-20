@@ -1,6 +1,6 @@
-# Read2Quiz
+# Quizify
 
-Read2Quiz is a serverless AI-powered web application that converts long educational text into structured knowledge and quiz questions automatically.
+Quizify is a serverless AI-powered web application that converts long educational text into structured knowledge and quiz questions automatically.
 
 The entire application runs as a single frontend deployment using serverless functions. No separate backend server or database is required.
 
