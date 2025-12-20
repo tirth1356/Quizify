@@ -33,20 +33,20 @@ All AI processing happens **serverless**, so you don’t need to manage a backen
 
 ## 📁 File Structure
 
-Quizify/
-├─ app/
-│ ├─ components/
-│ │ ├─ ConceptHeatmap.tsx
-│ │ ├─ DifficultySelector.tsx
-│ │ └─ HierarchyTree.tsx
-│ ├─ page.tsx
-│ └─ layout.tsx
-├─ public/
-├─ styles/
-│ └─ globals.css
-├─ package.json
-├─ tsconfig.json
-└─ README.md
+Quizify/ <br>
+├─ app/ <br>
+│ ├─ components/ <br>
+│ │ ├─ ConceptHeatmap.tsx <br>
+│ │ ├─ DifficultySelector.tsx <br>
+│ │ └─ HierarchyTree.tsx <br>
+│ ├─ page.tsx <br>
+│ └─ layout.tsx <br>
+├─ public/ <br>
+├─ styles/ <br>
+│ └─ globals.css <br>
+├─ package.json <br>
+├─ tsconfig.json <br>
+└─ README.md <br>
 
 
 ---
