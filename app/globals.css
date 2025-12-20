@@ -1,102 +1,192 @@
 @import "tailwindcss";
 
+/* ============================= */
+/* 🌑 ROOT THEME */
+/* ============================= */
+
 :root {
-  --background-dark: #0a0a0a;
-  --background-light: #f5f5f5;
-  --foreground-dark: #e5e5e5;
-  --foreground-light: #1a1a1a;
+  --bg-dark: #020617;
+  --bg-deep: #01030f;
+  --fg-dark: #e5e7eb;
+
+  --accent-blue: 56, 189, 248;
+  --accent-purple: 168, 85, 247;
 }
 
-.dark {
-  --background: var(--background-dark);
-  --foreground: var(--foreground-dark);
+/* ============================= */
+/* 🧠 GLOBAL RESET */
+/* ============================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.light {
-  --background: var(--background-light);
-  --foreground: var(--foreground-light);
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--bg-dark);
+  color: var(--fg-dark);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Glassy black grey background */
+/* ============================= */
+/* 🌌 PREMIUM ANIMATED BACKGROUND WITH FLOATING LIGHT BLOBS */
+/* ============================= */
+
 .glass-bg {
-  background: 
-    radial-gradient(at 0% 0%, rgba(100, 100, 100, 0.08) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(80, 80, 80, 0.06) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(60, 60, 60, 0.05) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(90, 90, 90, 0.07) 0px, transparent 50%);
+  min-height: 100dvh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    /* blue glow cloud */
+    radial-gradient(
+      700px circle at 45% -12%,
+      rgba(var(--accent-blue), 0.18),
+      transparent 60%
+    ),
+
+    /* purple depth cloud */
+    radial-gradient(
+      900px circle at 55% 45%,
+      rgba(var(--accent-purple), 0.15),
+      transparent 70%
+    ),
+
+    /* vertical atmosphere */
+    linear-gradient(
+      to bottom,
+      #040b1f 0%,
+      #06152d 22%,
+      #0a1033 45%,
+      #07071c 72%,
+      #020617 100%
+    );
+
+  background-size: 200% 200%;
+  animation:
+    bg-drift-main 32s ease-in-out infinite,
+    bg-drift-subtle 18s ease-in-out infinite alternate;
 }
 
-.dark .glass-bg {
-  background: 
-    radial-gradient(at 0% 0%, rgba(150, 150, 150, 0.12) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(120, 120, 120, 0.10) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(100, 100, 100, 0.08) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(130, 130, 130, 0.11) 0px, transparent 50%),
-    linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #0a0a0a 50%, #151515 75%, #0a0a0a 100%);
+/* ============================= */
+/* FLOATING LIGHT BLOBS LAYERS */
+/* ============================= */
+
+.glass-bg::before,
+.glass-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(100px);
+  opacity: 0.12;
 }
 
-.light .glass-bg {
-  background: 
-    radial-gradient(at 0% 0%, rgba(200, 200, 200, 0.06) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(180, 180, 180, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(160, 160, 160, 0.04) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(190, 190, 190, 0.05) 0px, transparent 50%),
-    linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 25%, #f5f5f5 50%, #e8e8e8 75%, #f5f5f5 100%);
+/* main drifting lights */
+.glass-bg::before {
+  background-image:
+    radial-gradient(circle, rgba(var(--accent-blue), 0.18) 0%, transparent 50%),
+    radial-gradient(circle, rgba(var(--accent-purple), 0.15) 0%, transparent 50%),
+    radial-gradient(circle, rgba(var(--accent-blue), 0.12) 0%, transparent 50%);
+  animation: float-lights 26s linear infinite;
 }
 
-::-webkit-scrollbar {
-  width: 11px;
+/* subtle secondary drifting lights for depth */
+.glass-bg::after {
+  background-image:
+    radial-gradient(circle, rgba(var(--accent-purple), 0.15) 0%, transparent 50%),
+    radial-gradient(circle, rgba(var(--accent-blue), 0.12) 0%, transparent 50%);
+  animation: float-lights 38s linear infinite alternate-reverse;
 }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, rgba(80, 80, 80, 0.8) 20%, rgba(120, 120, 120, 0.5) 80%);
-  border-radius: 8px;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, rgba(100, 100, 100, 0.9) 20%, rgba(150, 150, 150, 0.6) 80%);
-}
-
-/* Animations */
-@keyframes fade-in {
-  from {
-    opacity: 0;
+/* keyframes for gentle floating motion */
+@keyframes float-lights {
+  0% {
+    background-position: 0% 0%, 50% 20%, 80% 10%;
   }
-  to {
-    opacity: 1;
+  25% {
+    background-position: 10% 5%, 55% 25%, 75% 15%;
+  }
+  50% {
+    background-position: 20% 10%, 30% 30%, 70% 50%;
+  }
+  75% {
+    background-position: 15% 15%, 45% 40%, 65% 30%;
+  }
+  100% {
+    background-position: 0% 0%, 50% 20%, 80% 10%;
   }
 }
 
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* main slow movement of background gradient */
+@keyframes bg-drift-main {
+  0% { background-position: 50% 0%; }
+  50% { background-position: 54% 20%; }
+  100% { background-position: 50% 0%; }
 }
 
-.animate-fade-in {
-  animation: fade-in 0.5s ease-out;
+/* subtle secondary hue shift (adds life) */
+@keyframes bg-drift-subtle {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(-6deg); }
 }
 
-.animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out;
+/* ============================= */
+/* 🧊 GLASS CARD */
+/* ============================= */
+
+.glass-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* lift + glow */
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.55),
+    0 0 28px rgba(var(--accent-blue), 0.18);
+}
+
+/* ============================= */
+/* 🎯 INPUTS – CLICK SAFE */
+/* ============================= */
+
+input,
+textarea,
+button,
+select {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+/* ============================= */
+/* ✨ ENTRY ANIMATION */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease forwards;
 }

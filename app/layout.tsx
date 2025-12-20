@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Knowledge Extractor - AI Quiz Generator",
+  title: "Quizify Quiz Makers",
   description: "Extract key concepts and generate AI-powered quiz questions from any educational text using Google Gemini",
 };
 
