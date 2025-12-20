@@ -8,7 +8,7 @@ The entire application runs as a single frontend deployment using serverless fun
 ## Live Demo
 
 Vercel Deployment Link:  
-https://your-vercel-project-link.vercel.app
+[https://your-vercel-project-link.vercel.app](https://quizify067.vercel.app/)
 
 ---
 
