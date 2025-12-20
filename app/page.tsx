@@ -242,7 +242,7 @@ export default function Home() {
             Quizify
           </h1>
           <p className="text-lg text-gray-300/70">
-            Extract concepts and take personalized quizzes powered by AI
+            Turn educational content into structured knowledge and quizzes
           </p>
         </div>
 
@@ -302,18 +302,18 @@ export default function Home() {
             </div>
 
             {/* How to Use Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-              <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 shadow-xl hover:bg-white/8 transition-all">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-10">
+              <div className="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-4 shadow-lg hover:bg-white/10 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
                 <div className="text-3xl mb-3">📝</div>
                 <h3 className="text-lg font-bold text-gray-100 mb-2">Paste Text</h3>
                 <p className="text-gray-300/70 text-sm">Copy and paste any educational content, article, or study material into the text area above.</p>
               </div>
-              <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 shadow-xl hover:bg-white/8 transition-all">
+               <div className="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-4 shadow-lg hover:bg-white/10 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
                 <div className="text-3xl mb-3">⚙️</div>
                 <h3 className="text-lg font-bold text-gray-100 mb-2">Select Difficulty</h3>
                 <p className="text-gray-300/70 text-sm">Choose your preferred quiz difficulty level: Easy, Medium, Hard, or Mixed for variety.</p>
               </div>
-              <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 shadow-xl hover:bg-white/8 transition-all">
+               <div className="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-4 shadow-lg hover:bg-white/10 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
                 <div className="text-3xl mb-3">🎯</div>
                 <h3 className="text-lg font-bold text-gray-100 mb-2">Take Quiz</h3>
                 <p className="text-gray-300/70 text-sm">Review extracted concepts, explore the topic hierarchy, and test your knowledge with AI-generated questions.</p>
