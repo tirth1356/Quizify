@@ -87,8 +87,9 @@ Enjoy learning smarter with Quizify! 🎉
 <img width="1606" height="941" alt="image" src="https://github.com/user-attachments/assets/a25ef7aa-e7d5-44f0-84a7-0f7aa94a7374" />
 <img width="893" height="944" alt="image" src="https://github.com/user-attachments/assets/93ba5109-2d6a-4ba2-b149-afd384a49474" />
 <img width="854" height="827" alt="image" src="https://github.com/user-attachments/assets/7b050bff-284b-40ab-9906-b99e93ed8814" />
-<img width="858" height="887" alt="image" src="https://github.com/user-attachments/assets/d4c9a1d4-1e3d-407c-abb1-ff17b4a107f5" />
 <img width="854" height="664" alt="image" src="https://github.com/user-attachments/assets/eb938423-7a76-4ec5-b12a-716d4e9e573e" />
+<img width="858" height="887" alt="image" src="https://github.com/user-attachments/assets/d4c9a1d4-1e3d-407c-abb1-ff17b4a107f5" />
+
 
 ---
 
