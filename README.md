@@ -5,6 +5,12 @@ Read2Quiz is a serverless AI-powered web application that converts long educatio
 The entire application runs as a single frontend deployment using serverless functions. No separate backend server or database is required.
 
 ---
+## Live Demo
+
+Vercel Deployment Link:  
+https://your-vercel-project-link.vercel.app
+
+---
 
 ## What This App Does
 
@@ -67,29 +73,6 @@ All AI calls are executed on the server side using serverless API routes.
 - The AI performs all reasoning steps in one request
 - The response is returned as strict JSON
 - The frontend parses the JSON and displays the output visually
-
----
-
-## Deployment Steps (Vercel)
-
-1. Clone the repository
-2. Install dependencies  
-   npm install
-3. Create a `.env.local` file and add:
-   LLM_API_KEY=your_api_key_here
-4. Push the project to GitHub
-5. Import the repository into Vercel
-6. Add the same environment variable in the Vercel dashboard
-7. Deploy the project
-
-Once deployed, both frontend and backend logic run automatically.
-
----
-
-## Live Demo
-
-Vercel Deployment Link:  
-https://your-vercel-project-link.vercel.app
 
 ---
 
