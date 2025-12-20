@@ -1,84 +1,81 @@
-# Quizify
+# 🎓 Quizify by Team Velocity
 
-Quizify is a serverless AI-powered web application that converts long educational text into structured knowledge and quiz questions automatically.
+**Turn educational content into structured knowledge and quizzes!**  
 
-The entire application runs as a single frontend deployment using serverless functions. No separate backend server or database is required.
+Quizify is a smart web app that converts your educational text into organized concepts and generates quizzes automatically. It’s perfect for students, teachers, or anyone who wants to learn efficiently.  
 
----
-## Live Demo
-
-<a href="https://quizify067.vercel.app/" target="_blank" rel="noopener noreferrer">
-  🚀 Live Demo (Vercel)
-</a>
+✨ Hosted live: [Quizify on Vercel](https://quizify067.vercel.app)  
+🎥 Tutorial video: *Ready to watch!*  
 
 ---
 
-## What This App Does
+## 🔹 Features
 
-- Takes a long educational text as input (chapter, notes, article)
-- Extracts key concepts and definitions
-- Organizes concepts into topics and subtopics
-- Generates quiz questions based on the content
-- Assigns difficulty levels (easy, medium, hard)
-- Allows the user to choose the type of questions:
-  - Easy only
-  - Medium only
-  - Hard only
-  - Mixed
-- Displays results with difficulty-based color hover effects
-- Supports dark and light mode (dark mode by default)
+- 🧠 **Concept Extraction** – Breaks down large educational content into structured concepts.  
+- ❓ **Quiz Generation** – Generates multiple-choice and practice questions from your content.  
+- ⚡ **AI Powered** – Uses the Groq API (powered by LLaMA 3.1) for understanding and processing text.  
+- 🌙 **Dark/Light Mode** – Smooth theme switching for comfortable reading.  
+- 💻 **Responsive Design** – Works beautifully on mobile, tablet, and desktop.  
 
 ---
 
-## How It Works (High Level)
+## 🛠 How It Works
 
-1. The user pastes educational text into the web app
-2. The user selects the desired question difficulty
-3. The frontend sends the request to a serverless API route
-4. The serverless function calls the LLaMA API
-5. The AI processes the text using an internal multi-step reasoning pipeline
-6. A structured JSON response is generated
-7. The frontend renders concepts, hierarchy, and quiz questions
+1. You paste or upload educational content.  
+2. The app sends the content to the **Groq API**, which processes it and extracts key concepts.  
+3. Concepts are visualized in a **heatmap** or **hierarchy tree**.  
+4. You can generate quizzes based on difficulty levels (Easy, Medium, Hard, or Mixed).  
+5. Results appear instantly, ready to practice or share!  
 
----
-
-## AI Model Used
-
-- **LLaMA API**
-- The AI is responsible for:
-  - Text segmentation
-  - Concept extraction
-  - Hierarchy generation
-  - Quiz creation
-  - Difficulty classification
-  - Internal consistency validation
-
-All AI calls are executed on the server side using serverless API routes.
+All AI processing happens **serverless**, so you don’t need to manage a backend – only the frontend is hosted, but it communicates seamlessly with the Groq API.  
 
 ---
 
-## Serverless Architecture
+## 📁 File Structure
 
-- Built using **Next.js (App Router)**
-- Backend logic runs as **serverless API routes**
-- Frontend and backend exist in the same project
-- No database or persistent storage
-- API keys are stored securely using environment variables
-- Deployed as a single application on Vercel
+Quizify/
+├─ app/
+│ ├─ components/
+│ │ ├─ ConceptHeatmap.tsx
+│ │ ├─ DifficultySelector.tsx
+│ │ └─ HierarchyTree.tsx
+│ ├─ page.tsx
+│ └─ layout.tsx
+├─ public/
+├─ styles/
+│ └─ globals.css
+├─ package.json
+├─ tsconfig.json
+└─ README.md
+
 
 ---
 
-## How the API Response Is Generated
+## ❤️ Team
 
-- The serverless API route sends a structured prompt to the LLaMA API
-- The AI performs all reasoning steps in one request
-- The response is returned as strict JSON
-- The frontend parses the JSON and displays the output visually
+Made with ❤️ by **Tirth Patel & Divy Mevada**  
+
+Check out the source on GitHub: [View on GitHub](https://github.com/tirth1356/Quizify)  
 
 ---
 
-## Notes
+## 🚀 Tech Stack
 
-- This project is intentionally stateless
-- Focus is on AI reasoning and content generation
-- Designed for fast, reliable demos and hackathon use
+- **Frontend:** Next.js (App Router) + Tailwind CSS  
+- **AI Processing:** Groq API (LLaMA 3.1)  
+- **Deployment:** Vercel  
+- **Languages:** TypeScript & JavaScript  
+- **State Management:** React Hooks  
+
+---
+
+## 🌟 Why Quizify?
+
+- Saves time converting notes into quizzes.  
+- Makes learning interactive and visual.  
+- Lightweight, serverless, and responsive.  
+- Great for self-study or classroom use!  
+
+---
+
+Enjoy learning smarter with Quizify! 🎉
