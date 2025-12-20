@@ -5,7 +5,7 @@
 Quizify is a smart web app that converts your educational text into organized concepts and generates quizzes automatically. It’s perfect for students, teachers, or anyone who wants to learn efficiently.  
 
 ✨ Hosted live: [Quizify on Vercel](https://quizify067.vercel.app)  
-🎥 Tutorial video: *Ready to watch!*  
+🎥 Tutorial video: [*Ready to watch!* ](https://youtu.be/fihg7uMRoX8) 
 
 ---
 
