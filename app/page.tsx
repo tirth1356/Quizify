@@ -239,7 +239,7 @@ export default function Home() {
         {/* Centered Title */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-100 mb-3">
-            Knowledge Extractor
+            Quizify
           </h1>
           <p className="text-lg text-gray-300/70">
             Extract concepts and take personalized quizzes powered by AI
