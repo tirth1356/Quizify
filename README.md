@@ -15,7 +15,7 @@ Quizify is a smart web app that converts your educational text into organized co
 - 📊 **Hierarchical Topic Ranking** – Organizes topics and subtopics in a clear hierarchy, helping you see the big picture and drill down into details.
 - ❓ **Smart Quiz Generation** – Automatically creates 3–15 questions per topic, with selectable difficulty levels: Easy, Medium, Hard, or Mixed.
 - 📈 **Weak Point Analysis** – After completing a quiz, highlights the concepts you need to focus on for improvement.
-- ⚡ Fast & Serverless – Generates responses quickly (1.3–4 seconds) on a fully serverless website, no lag, just instant results.
+- ⚡ Fast & Serverless – Generates responses quickly (1.3–8 seconds) on a fully serverless website, no lag, just instant results.
 ---
 
 ## 🛠 How It Works
