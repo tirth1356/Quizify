@@ -75,6 +75,13 @@ Quizify/ <br>
 
 ---
 
+## ❤️ Team
+
+Made with ❤️ by **Tirth Patel & Divy Mevada**  
+Enjoy learning smarter with Quizify! 🎉
+
+---
+
 ## project screenshots
 <img width="1606" height="941" alt="image" src="https://github.com/user-attachments/assets/a25ef7aa-e7d5-44f0-84a7-0f7aa94a7374" />
 <img width="893" height="944" alt="image" src="https://github.com/user-attachments/assets/93ba5109-2d6a-4ba2-b149-afd384a49474" />
@@ -84,7 +91,3 @@ Quizify/ <br>
 
 ---
 
-## ❤️ Team
-
-Made with ❤️ by **Tirth Patel & Divy Mevada**  
-Enjoy learning smarter with Quizify! 🎉
