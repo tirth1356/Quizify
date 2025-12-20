@@ -605,30 +605,54 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-  {/* Footer */}
       <footer className="w-full py-6 mt-auto">
-        <div className="max-w-4xl mx-auto px-4 flex justify-between items-center">
+        <div className="max-w-4xl mx-auto px-4 flex justify-between items-center gap-4">
           <p className="text-gray-400/70 text-sm">
             Made with ❤️ by <span className="text-red-400">Tirth Patel & Divy Mevada</span>
           </p>
-          <a
-            href="https://github.com/tirth1356/Quizify"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-gray-100 flex items-center gap-1 text-sm"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              viewBox="0 0 24 24"
-              fill="currentColor"
+      
+          <div className="flex items-center gap-3">
+            {/* GitHub */}
+            <a
+              href="https://github.com/tirth1356/Quizify"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-gray-100 flex items-center gap-1 text-sm"
             >
-              <path d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577v-2.234c-3.338.726-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.755-1.333-1.755-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.304.762-1.604-2.665-.304-5.467-1.333-5.467-5.93 0-1.31.467-2.382 1.235-3.222-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.005 2.047.138 3.003.404 2.289-1.552 3.295-1.23 3.295-1.23.653 1.653.242 2.873.12 3.176.77.84 1.232 1.912 1.232 3.222 0 4.61-2.807 5.625-5.479 5.921.43.372.814 1.102.814 2.222v3.293c0 .32.218.694.825.576C20.565 21.796 24 17.302 24 12c0-6.628-5.373-12-12-12z"/>
-            </svg>
-            View on GitHub
-          </a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577v-2.234c-3.338.726-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.755-1.333-1.755-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.304.762-1.604-2.665-.304-5.467-1.333-5.467-5.93 0-1.31.467-2.382 1.235-3.222-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.005 2.047.138 3.003.404 2.289-1.552 3.295-1.23 3.295-1.23.653 1.653.242 2.873.12 3.176.77.84 1.232 1.912 1.232 3.222 0 4.61-2.807 5.625-5.479 5.921.43.372.814 1.102.814 2.222v3.293c0 .32.218.694.825.576C20.565 21.796 24 17.302 24 12c0-6.628-5.373-12-12-12z"/>
+              </svg>
+              GitHub
+            </a>
+      
+            {/* LinkedIn Tirth */}
+            <a
+              href="https://www.linkedin.com/in/tirth1356/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-blue-400 flex items-center justify-center w-7 h-7 rounded-full bg-white/5 border border-white/10 text-sm font-bold"
+            >
+              TP
+            </a>
+      
+            {/* LinkedIn Divy */}
+            <a
+              href="https://www.linkedin.com/in/divy-mevada-4230332bb/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-blue-400 flex items-center justify-center w-7 h-7 rounded-full bg-white/5 border border-white/10 text-sm font-bold"
+            >
+              DM
+            </a>
+          </div>
         </div>
       </footer>
+
     </div>
   );
 }
