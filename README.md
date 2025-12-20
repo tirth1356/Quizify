@@ -1,4 +1,5 @@
-# 🎓 Quizify by Team Velocity
+<img width="311" height="65" alt="image" src="https://github.com/user-attachments/assets/9ea078f1-943f-4606-b066-472845234c3e" />
+
 
 **Turn educational content into structured knowledge and quizzes!**  
 
