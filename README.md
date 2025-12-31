@@ -72,7 +72,7 @@ Quizify/ <br>
 - Saves time converting notes into quizzes.  
 - Makes learning interactive and visual.  
 - Lightweight, serverless, and responsive.  
-- Great for self-study or classroom use!  
+- Great for self-study or classroom use.
 
 ---
 
